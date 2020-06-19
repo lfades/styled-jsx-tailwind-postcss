@@ -1,4 +1,5 @@
-import Head from 'next/head'
+import Head from "next/head";
+import styles from "../styles.module.css";
 
 export default function Home() {
   return (
@@ -17,8 +18,8 @@ export default function Home() {
           Get started by editing <code>pages/index.js</code>
         </p>
 
-        <div className="grid">
-          <a href="https://nextjs.org/docs" className="card">
+        <div className={`grid ${styles.grid}`}>
+          <a href="https://nextjs.org/docs" className={`card ${styles.card}`}>
             <h3>Documentation &rarr;</h3>
             <p>Find in-depth information about Next.js features and API.</p>
           </a>
@@ -54,7 +55,7 @@ export default function Home() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          Powered by{' '}
+          Powered by{" "}
           <img src="/vercel.svg" alt="Vercel Logo" className="logo" />
         </a>
       </footer>
@@ -146,6 +147,10 @@ export default function Home() {
 
           max-width: 800px;
           margin-top: 3rem;
+
+          & .card {
+            @apply text-orange-light;
+          }
         }
 
         .card {
@@ -153,7 +158,6 @@ export default function Home() {
           flex-basis: 45%;
           padding: 1.5rem;
           text-align: left;
-          color: inherit;
           text-decoration: none;
           border: 1px solid #eaeaea;
           border-radius: 10px;
@@ -205,5 +209,5 @@ export default function Home() {
         }
       `}</style>
     </div>
-  )
+  );
 }

@@ -1,0 +1,7 @@
+.grid {
+  @apply bg-black;
+
+  & .card {
+    @apply bg-gray-800;
+  }
+}

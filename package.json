@@ -7,9 +7,38 @@
     "build": "next build",
     "start": "next start"
   },
+  "postcss": {
+    "plugins": {
+      "postcss-advanced-variables": {},
+      "postcss-smart-import": {},
+      "postcss-color-function": {},
+      "postcss-flexbugs-fixes": {},
+      "postcss-preset-env": {
+        "autoprefixer": {
+          "flexbox": "no-2009"
+        },
+        "stage": 3,
+        "features": {
+          "custom-properties": false,
+          "nesting-rules": true
+        }
+      },
+      "tailwindcss": {}
+    }
+  },
   "dependencies": {
-    "next": "9.4.2",
+    "next": "^9.4.4",
     "react": "16.13.1",
     "react-dom": "16.13.1"
+  },
+  "devDependencies": {
+    "postcss-advanced-variables": "^3.0.1",
+    "postcss-color-function": "^4.1.0",
+    "postcss-flexbugs-fixes": "^4.2.1",
+    "postcss-nested": "^4.2.1",
+    "postcss-preset-env": "^6.7.0",
+    "postcss-smart-import": "^0.7.6",
+    "styled-jsx-plugin-postcss": "^2.0.1",
+    "tailwindcss": "^1.4.6"
   }
 }
